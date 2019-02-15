@@ -1,6 +1,6 @@
 # CS 476 project
 
-Contributors:
+## Contributors:
 
 
 Eric Zhu
@@ -14,7 +14,7 @@ Benjamin Martin
 
 
 
-
+##
 Oregon State University
 
 
