@@ -11,7 +11,6 @@ function simulate_project(n)
 
     p = 10; % Number of software downloads
     b = 10; % Number of block in the chain
-    avg_items = 10; % Number of IoT in gateway.
     
     normal_nodes = 100;
     vendor_nodes = 20;
