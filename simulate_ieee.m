@@ -13,7 +13,8 @@ function simulate_project(n)
     b = 10; % Number of block in the chain
     avg_items = 10; % Number of IoT in gateway.
     
-    nodes = 100;
+    normal_nodes = 100;
+    vendor_nodes = 20;
     
     avg_software_package_size = 256; % Average packet size is 256 bits
     
