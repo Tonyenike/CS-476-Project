@@ -18,16 +18,18 @@ function simulate_project(n)
     
     avg_software_package_size = 256; % Average packet size is 256 bits
     
+    avg_contract_creation = 512; % Average contract size is 512 bits
+    
     service_rate = 20; % Service rate is 20 bits per second
     
     for i = 1:n
         for k = 1:p
             S(k) = round(poissrnd(avg_software_package_size)); % Poisson distribution
+            G(k) = round(poissrnd(avg_contract_creation));
             for j = 1:n
-                C(k, j) = (S(k) / service_rate) * (S(k) / service_rate); % Polynomial-time hash to verify each block. We chose n^2.
+                C(k, j) = (G(k) / service_rate) * (G(k) / service_rate); % Polynomial-time hash to create each block. We chose n^2.
             end
             download_time = S(k) / service_rate; % time to download the firmware once we have verified the block. Assume that executing smart contract time is 0.
-            routing_time = poissrnd(avg_items);
         end
     end
 end
