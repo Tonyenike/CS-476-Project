@@ -8,14 +8,14 @@
 function simulate_project(n)
 
     p = 10; % Number of software downloads
+    b = 10; % Number of block in the chain
+    
     avg_software_package_size = 256; % Average packet size is 256 bits
-    avg_blocks_in_chain = 10;
     
     for i = 1:n
         for k = 1:p
-            S(k) = round(exprnd(avg_software_package_size));
-            blocks(n) = round(exprnd(avg_blocks_in_chain));
-            for j = 1:blocks(n)
+            S(k) = round(poissnd(avg_software_package_size)); % Poisson distribution
+            for j = 1:n
                 C(k, j) = S(k) * S(k); % Polynomial-time hash to verify each block. We chose n^2.
             end
         end
