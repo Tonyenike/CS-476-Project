@@ -1,5 +1,5 @@
 %   This is the simulation for testing the ieee protocol as outlined here: 
-%       http://www.cuhk.edu.cn/academics/caiwei/paper/WeiCaiWEHFL2018.pdf
+%       https://csce.ucmss.com/cr/books/2018/LFS/CSREA2018/IKE9004.pdf
 %   Parameters:
 %       n = the desired number of simulations to run
 %
